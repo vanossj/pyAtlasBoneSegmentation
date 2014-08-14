@@ -1,4 +1,4 @@
-Put the following STL files from the Digimouse project in this folder.
+Put the following STL files from the MOBY mouse project in this folder.
 
 Frontpaw_left.stl
 Frontpaw_right.stl
