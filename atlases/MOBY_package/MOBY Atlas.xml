@@ -1,0 +1,407 @@
+<?xml version="1.0"?>
+<!--
+<jointType>
+	type of joint, can be 'ball' or 'hinge'
+<length>
+	length in proximodistal vector of bone/group of bones
+<proximodistalVec>
+	vector from proximal end to distal end of bone, length of vector is the length of the bone
+<secondaryVec>
+	Normal to proximodistal vector, also the hinge axis if joint is a hinge joint
+<tertiaryVec>
+	Normal to proximodistal and secondary vectors
+<DOFvec>
+	vector that points in the middle of angular rotations
+<DOFangle>
+	max angle diviation from DOFvec allows for rotation, in degrees
+	for ball joints this angle is allowed full rotation in the azimuth dimension
+	for hinge joints the azimuth angle is constrained by the hinge axis
+<DOFtrans>
+	max translation allowed in mm
+
+-->
+<atlas>MOBY Mouse
+<axes>
+	<!-- Default Axis -->
+	<anteriorVector>(0.0,0.0,1.0)</anteriorVector>
+	<dorsalVector>(0.0,-1.0,0.0)</dorsalVector>
+	<rightVector>(1.0,0.0,0.0)</rightVector>
+	<!-- PCA axis, This doesn't currently work
+	<anteriorVector>(0.00667169,  -0.01563879, 0.99985545)</anteriorVector>
+	<dorsalVector>(-0.38789121,  -0.92162928,  -0.01182699)</dorsalVector>
+	<rightVector>(0.92168102, -0.38775623, -0.01221498)</rightVector>
+	-->
+</axes>
+<!-- This Is for the skull joint also known as the atlas base joint-->
+<position>(198,193,906)</position>
+<jointType>ball</jointType>
+<proximodistalVec>(3.52778079e-02,   3.31858716e-01,   9.42669226e-01)</proximodistalVec>
+<length>260.0</length>
+<secondaryVec>(9.94173837e-01,  -1.07786055e-01,   7.39886215e-04)</secondaryVec>
+<tertiaryVec>(-1.01852134e-01,  -9.37150980e-01,   3.33727709e-01)</tertiaryVec>
+<DOFvec>(0.0,36.88, 262.42)</DOFvec>
+<DOFangle>75.00</DOFangle>
+<DOFtrans>10.0</DOFtrans>
+<bone>Skull Outside
+	<filepath>Skull_outside.stl</filepath>
+	<color>(249,124,0)</color>
+</bone>
+<bone>Skull Inside
+	<filepath>Skull_inside.stl</filepath>
+	<color>(249,124,0)</color>
+</bone>
+
+<joint>Neck
+	<position>(198,193,906)</position>
+	<jointType>ball</jointType>
+	<proximodistalVec>(1,0,0)</proximodistalVec>	<!-- TODO: Get actual value -->
+	<secondaryVec>(0,1,0)</secondaryVec>	<!-- TODO: Get actual value -->
+	<tertiaryVec>(0,0,1)</tertiaryVec>	<!-- TODO: Get actual value -->
+	<length>10.0</length>	<!-- TODO: Get actual value -->
+	<!-- 
+	<DOFvec></DOFvec>
+	<DOFangle></DOFangle>
+	<DOFtrans>0.0</DOFtrans>
+	-->
+	<bone>Spine
+		<filepath>Spine.stl</filepath>
+		<color>(214,0,132)</color>
+		
+	</bone>
+	<joint>Shoulder Complex
+		<position>(198,193,906)</position>
+		<jointType>ball</jointType>
+		<proximodistalVec>(1,0,0)</proximodistalVec>	<!-- TODO: Get actual value -->
+		<secondaryVec>(0,1,0)</secondaryVec>	<!-- TODO: Get actual value -->
+		<tertiaryVec>(0,0,1)</tertiaryVec>	<!-- TODO: Get actual value -->
+		<length>10.0</length>	<!-- TODO: Get actual value -->
+		<DOFvec>(219.5277, 116.7249, -26.1321)</DOFvec>	<!-- TODO: Get actual value -->
+		<DOFangle>90.0</DOFangle>	<!-- TODO: Get actual value -->
+		<DOFtrans>30.0</DOFtrans>	<!-- TODO: Get actual value -->
+		<joint>Forelimb Right
+			<position>(271,203,863)</position>
+			<jointType>ball</jointType>
+			<proximodistalVec>(1,0,0)</proximodistalVec>	<!-- TODO: Get actual value -->
+			<secondaryVec>(0,1,0)</secondaryVec>	<!-- TODO: Get actual value -->
+			<tertiaryVec>(0,0,1)</tertiaryVec>	<!-- TODO: Get actual value -->
+			<length>10.0</length>	<!-- TODO: Get actual value -->
+			<DOFvec>(219.5277, 116.7249, -26.1321)</DOFvec>
+			<DOFangle>90.0</DOFangle>
+			<DOFtrans>15.0</DOFtrans>
+			<joint>Scapula Right
+				<position>(271,203,863)</position>
+				<jointType>ball</jointType>
+				<proximodistalVec>(1,0,0)</proximodistalVec>	<!-- TODO: Get actual value -->
+				<secondaryVec>(0,1,0)</secondaryVec>	<!-- TODO: Get actual value -->
+				<tertiaryVec>(0,0,1)</tertiaryVec>	<!-- TODO: Get actual value -->
+				<length>10.0</length>	<!-- TODO: Get actual value -->
+				<!-- 
+				<DOFvec></DOFvec>
+				<DOFangle></DOFangle>
+				<DOFtrans>0.0</DOFtrans>
+				-->
+				<bone>Scapula Right
+					<filepath>Scapula_right.stl</filepath>
+					<color>(0,255,0)</color>
+					
+				</bone>	
+			</joint>
+			<joint>Shoulder Right
+				<position>(271,203,863)</position>
+				<jointType>ball</jointType>
+				<proximodistalVec>(0.40774717, -0.19537885, -0.89194694)</proximodistalVec>
+				<secondaryVec>(0,1,0)</secondaryVec>	<!-- TODO: Get actual value -->
+				<tertiaryVec>(0,0,1)</tertiaryVec>	<!-- TODO: Get actual value -->
+				<length>10.0</length>	<!-- TODO: Get actual value -->
+				<DOFvec>(122.9355, 65.3660, -14.6340)</DOFvec>
+				<DOFangle>60.0</DOFangle>
+				<DOFtrans>15.0</DOFtrans>
+				<!-- 
+				<DOFvec></DOFvec>
+				<DOFangle></DOFangle>
+				<DOFtrans>0.0</DOFtrans>
+				-->
+				<bone>Upper Forelimb Right
+					<filepath>Upper_forelimb_right.stl</filepath>
+					<color>(0,0,255)</color>
+					
+				</bone>
+				<joint>Elbow Right
+					<position>(319,180,758)</position>
+					<jointType>hinge</jointType>
+					<!-- Proximal Distal Vector is the vector along the bone, from proximal joint to distal joint -->
+					<proximodistalVec>(0.13543768,  0.82955578, -0.54175072)</proximodistalVec>
+					<!-- secondary Vector is also the hinge axis -->
+					<secondaryVec>(0.84576637,  0.1000941,   0.36471068)</secondaryVec>
+					<tertiaryVec>(-0.3567739,   0.50759011,  0.68805387)</tertiaryVec>
+					<length>10.0</length>	<!-- TODO: Get actual value -->
+					<!-- 
+					<DOFvec></DOFvec>
+					<DOFangle></DOFangle>
+					<DOFtrans>0.0</DOFtrans>
+					-->
+					<!-- TODO: Add max and min allowable angle around hinge axis from proximodistal vector -->
+					
+					<bone>Lower Forelimb Right
+						<filepath>Lower_forelimb_right.stl</filepath>
+						<color>(255,0,0)</color>
+						
+					</bone>
+					<joint>Wrist Right
+						<position>(335,278,694)</position>
+						<jointType>ball</jointType>
+						<proximodistalVec>(-0.17562856,  0.62445711, -0.76105711)</proximodistalVec>
+						<secondaryVec>(0,1,0)</secondaryVec>	<!-- TODO: Get actual value -->
+						<tertiaryVec>(0,0,1)</tertiaryVec>	<!-- TODO: Get actual value -->
+						<length>10.0</length>	<!-- TODO: Get actual value -->
+						<!-- 
+						<DOFvec></DOFvec>
+						<DOFangle></DOFangle>
+						<DOFtrans>0.0</DOFtrans>
+						-->
+						<bone>Forepaw Right
+							<filepath>Forepaw_right.stl</filepath>
+							<color>(0,155,127)</color>
+							
+						</bone>
+					</joint>
+				</joint>
+			</joint>
+		</joint>
+		<joint>Forelimb Left
+			<position>(130,221,867)</position>
+			<jointType>ball</jointType>
+			<proximodistalVec>(1,0,0)</proximodistalVec>	<!-- TODO: Get actual value -->
+			<secondaryVec>(0,1,0)</secondaryVec>	<!-- TODO: Get actual value -->
+			<tertiaryVec>(0,0,1)</tertiaryVec>	<!-- TODO: Get actual value -->
+			<length>10.0</length>	<!-- TODO: Get actual value -->
+			<!-- 
+				<DOFvec></DOFvec>
+				<DOFangle></DOFangle>
+				<DOFtrans>0.0</DOFtrans>
+				-->
+			<joint>Scapula Left
+				<position>(130,221,867)</position>
+				<jointType>ball</jointType>
+				<proximodistalVec>(1,0,0)</proximodistalVec>	<!-- TODO: Get actual value -->
+				<secondaryVec>(0,1,0)</secondaryVec>	<!-- TODO: Get actual value -->
+				<tertiaryVec>(0,0,1)</tertiaryVec>	<!-- TODO: Get actual value -->
+				<length>10.0</length>	<!-- TODO: Get actual value -->
+				<!-- 
+				<DOFvec></DOFvec>
+				<DOFangle></DOFangle>
+				<DOFtrans>0.0</DOFtrans>
+				-->
+				<bone>Scapula Left
+					<filepath>Scapula_left.stl</filepath>
+					<color>(0,255,0)</color>
+					
+				</bone>	
+			</joint>
+			<joint>Shoulder Left
+				<position>(130,221,867)</position>
+				<jointType>ball</jointType>
+				<proximodistalVec>(1,0,0)</proximodistalVec>	<!-- TODO: Get actual value -->
+				<secondaryVec>(0,1,0)</secondaryVec>	<!-- TODO: Get actual value -->
+				<tertiaryVec>(0,0,1)</tertiaryVec>	<!-- TODO: Get actual value -->
+				<length>10.0</length>	<!-- TODO: Get actual value -->
+				<!-- 
+				<DOFvec></DOFvec>
+				<DOFangle></DOFangle>
+				<DOFtrans>0.0</DOFtrans>
+				-->
+				<bone>Upper Forelimb Left
+					<filepath>Upper_forelimb_left.stl</filepath>
+					<color>(0,0,255)</color>
+					
+				</bone>
+				<joint>Elbow Left
+					<position>(85,226,761)</position>
+					<jointType>hinge</jointType>
+					<proximodistalVec>(1,0,0)</proximodistalVec>	<!-- TODO: Get actual value -->
+					<secondaryVec>(0,1,0)</secondaryVec>	<!-- TODO: Get actual value -->
+					<tertiaryVec>(0,0,1)</tertiaryVec>	<!-- TODO: Get actual value -->
+					<length>10.0</length>	<!-- TODO: Get actual value -->
+					<!-- 
+					<DOFvec></DOFvec>
+					<DOFangle></DOFangle>
+					<DOFtrans>0.0</DOFtrans>
+					-->
+					<bone>Lower Forelimb Left
+						<filepath>Lower_forelimb_left.stl</filepath>
+						<color>(255,0,0)</color>
+						
+					</bone>
+					<joint>Wrist Left
+						<position>(111,339,707)</position>
+						<jointType>ball</jointType>
+						<proximodistalVec>(0.25901905,  0.37167977, -0.89149497)</proximodistalVec>
+						<secondaryVec>(0,1,0)</secondaryVec>	<!-- TODO: Get actual value -->
+						<tertiaryVec>(0,0,1)</tertiaryVec>	<!-- TODO: Get actual value -->
+						<length>10.0</length>	<!-- TODO: Get actual value -->
+						<!-- 
+						<DOFvec></DOFvec>
+						<DOFangle></DOFangle>
+						<DOFtrans>0.0</DOFtrans>
+						-->
+						<bone>Forepaw Left
+							<filepath>Forepaw_left.stl</filepath>
+							<color>(0,155,127)</color>
+							
+						</bone>
+					</joint>
+				</joint>
+			</joint>
+		</joint>
+	</joint>
+	
+	<joint>Hip Complex
+		<position>(197,132,424)</position>
+		<jointType>ball</jointType>
+		<proximodistalVec>(0.0526251,  -0.16125263,  0.9855091)</proximodistalVec>
+		<secondaryVec>(-0.9921899,   0.10331969,  0.0698874)</secondaryVec>
+		<tertiaryVec>(0.11309202,  0.98149001,  0.15455602)</tertiaryVec>
+		<joint>Hip Right
+			<position>(197,132,424)</position>
+			<jointType>ball</jointType>
+			<proximodistalVec>(0.40745981,  0.10186495, -0.90752412)</proximodistalVec>
+			<secondaryVec>(0.40745981,  0.10186495, -0.90752412)</secondaryVec>	<!-- Not anatomically correct -->
+			<tertiaryVec>(-0.8339765 ,  0.04150587, -0.36977961)</tertiaryVec>	<!-- Not anatomically correct -->
+			<length>10.0</length>	<!-- TODO: Get actual value -->
+			<!-- 
+			<DOFvec></DOFvec>
+			<DOFangle></DOFangle>
+			-->
+			<DOFtrans>2.0</DOFtrans>
+			<bone>Pelvis Right
+				<filepath>Pelvis_right_part.stl</filepath>
+				<color>(0,255,0)</color>
+			</bone>
+			<joint>Pelvis Hindlimb Right
+				<position>(241,143,326)</position>
+				<jointType>ball</jointType>
+				<proximodistalVec>(0.6222625,   0.69356341, -0.36298646)</proximodistalVec>
+				<secondaryVec>(0.        , -0.36298646, -0.69356341)</secondaryVec>	<!-- TODO: Get actual value -->
+				<tertiaryVec>(-0.61278937,  0.4315785 , -0.22587286)</tertiaryVec>	<!-- TODO: Get actual value -->
+				<length>10.0</length>	<!-- TODO: Get actual value -->
+				<!-- 
+				<DOFvec></DOFvec>
+				<DOFangle></DOFangle>
+				-->
+				<DOFtrans>3.0</DOFtrans>
+				<bone>Upper Hindlimb Right
+					<filepath>Upper_hindlimb_right.stl</filepath>
+					<color>(0,0,255)</color>
+				</bone>
+				<joint>Hindlimb Right Knee
+					<position>(337,250,270)</position>
+					<jointType>hinge</jointType>
+					<proximodistalVec>(-0.37034273,  0.15514357, -0.91584755)</proximodistalVec>
+					<secondaryVec>(-0.57888333,  0.70432698,  0.35339619)</secondaryVec>
+					<tertiaryVec>(0.69988329,  0.66104659, -0.17103235)</tertiaryVec>
+					<length>10.0</length>	<!-- TODO: Get actual value -->
+					<!-- 
+					<DOFvec></DOFvec>
+					<DOFangle></DOFangle>
+					-->
+					<DOFtrans>4.0</DOFtrans>
+					<bone>Lower Hindlimb Right
+						<filepath>Lower_hindlimb_right.stl</filepath>
+						<color>(255,0,0)</color>
+					</bone>
+					
+					<joint>Hindlimb Right Ankle
+						<position>(263,281,87)</position>
+						<jointType>ball</jointType>
+						<proximodistalVec>(-0.13025447,  0.6382469,  -0.75873228)</proximodistalVec>
+						<secondaryVec>(0.        , -0.75873228, -0.6382469)</secondaryVec>	<!-- TODO: Get actual value -->
+						<tertiaryVec>(-0.98303378, -0.08313451,  0.09882827)</tertiaryVec>	<!-- TODO: Get actual value -->
+						<length>10.0</length>	<!-- TODO: Get actual value -->
+						<!-- 
+						<DOFvec></DOFvec>
+						<DOFangle></DOFangle>
+						-->
+						<DOFtrans>1.0</DOFtrans>
+						<bone>HindPaw Right
+							<filepath>Hindpaw_right.stl</filepath>
+							<color>(0,155,127)</color>
+						</bone>
+					</joint>
+				</joint>
+			</joint>
+		</joint>
+		
+		<joint>Hip Left
+			<position>(197,132,424)</position>
+			<jointType>ball</jointType>
+			<proximodistalVec>(-0.46848748,  0.18018749, -0.86489996)</proximodistalVec>
+			<secondaryVec>(0,1,0)</secondaryVec>
+			<tertiaryVec>(0,0,1)</tertiaryVec>
+			<length>10.0</length>	<!-- TODO: Get actual value -->
+			<!-- 
+			<DOFvec></DOFvec>
+			<DOFangle></DOFangle>
+			-->
+			<DOFtrans>2.0</DOFtrans>
+			
+			<bone>Pelvis Left
+				<filepath>Pelvis_left_part.stl</filepath>
+				<color>(0,255,0)</color>
+			</bone>
+			<joint>Pelvis Hindlimb Left
+				<position>(145,152,328)</position>
+				<jointType>ball</jointType>
+				<proximodistalVec>(-0.46815349,  0.79173017, -0.39242278)</proximodistalVec>
+				<secondaryVec>(0.0, -0.39242278, -0.79173017)</secondaryVec>	<!-- Arbitrary, just picked to be normal to proximodistal vector -->
+				<tertiaryVec>(-0.7808323, -0.37065124,  0.18371409)</tertiaryVec>	<!-- Arbitrary, just picked to be normal to proximodistal & secondary vectors -->
+				<length>10.0</length>	<!-- TODO: Get actual value -->
+				<!-- 
+				<DOFvec></DOFvec>
+				<DOFangle></DOFangle>
+				-->
+				<DOFtrans>3.0</DOFtrans>
+				<bone>Upper Hindlimb Left
+					<filepath>Upper_hindlimb_left.stl</filepath>
+					<color>(0,0,255)</color>
+				</bone>
+				
+				<joint>Hindlimb Left Knee
+					<position>(77,267,271)</position>
+					<jointType>hinge</jointType>
+					<proximodistalVec>(0.3428707,  -0.11092876, -0.93281)</proximodistalVec>
+					<secondaryVec>(-0.78206479, -0.57124853, -0.21952939)</secondaryVec>
+					<tertiaryVec>(-0.50851422,  0.80478805, -0.28261786)</tertiaryVec>
+					<length>10.0</length>	<!-- TODO: Get actual value -->
+					<!-- 
+					<DOFvec></DOFvec>
+					<DOFangle></DOFangle>
+					-->
+					<DOFtrans>4.0</DOFtrans>
+					<bone>Lower Hindlimb Left
+						<filepath>Lower_hindlimb_left.stl</filepath>
+						<color>(255,0,0)</color>
+					</bone>
+					
+					<joint>Hindlimb Left Ankle
+						<position>(145,245,86)</position>
+						<jointType>ball</jointType>
+						<proximodistalVec>(-0.31917807,  0.56872308, -0.75807613)</proximodistalVec>
+						<secondaryVec>(0.        , -0.75807613, -0.56872308)</secondaryVec>	<!-- Arbitrary, just picked to be normal to proximodistal vector -->
+						<tertiaryVec>(-0.89812536, -0.18152394,  0.24196128)</tertiaryVec>	<!-- Arbitrary, just picked to be normal to proximodistal & secondary vector -->
+						<length>10.0</length>	<!-- TODO: Get actual value -->
+						<!-- 
+						<DOFvec></DOFvec>
+						<DOFangle></DOFangle>
+						-->
+						<DOFtrans>1.0</DOFtrans>
+						<bone>HindPaw Left
+							<filepath>Hindpaw_left.stl</filepath>
+							<color>(0,155,127)</color>
+						</bone>
+					</joint>
+				</joint>
+			</joint>
+		</joint>
+	</joint>
+</joint>
+</atlas>
